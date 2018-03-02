@@ -1,0 +1,13 @@
+node_modules/*
+deploy_env
+*.env
+*.log
+bin/.DS_Store
+start.sh
+.DS_Store
+.history
+.production
+.staging
+._*
+.vscode*
+

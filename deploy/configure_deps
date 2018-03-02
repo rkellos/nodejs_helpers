@@ -1,0 +1,21 @@
+#!/bin/bash
+
+DEPLOYDIR=$(dirname "$0")
+source /home/ubuntu/.bashrc
+source "$DEPLOYDIR/helpers.sh"
+
+PATH=$PATH:/home/ubuntu/.nvm/versions/node/v4.3.1/bin
+cd /srv/nodejs-helpers
+cp /srv/app.env /srv/nodejs-helpers/.env
+echo "//registry.npmjs.org/:_authToken=$(getEnvironmentValue "NPM_TOKEN")" > .npmrc
+slc build
+
+slc ctl set-size consumer-node 4
+
+slc deploy --service=consumer-node
+
+export NVM_DIR="/home/ubuntu/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+cd /srv/nodejs-helpers
+npm install

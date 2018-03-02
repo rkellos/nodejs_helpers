@@ -1,0 +1,10 @@
+node_modules/
+app_development.json
+.travis.yml
+.nyc_output
+coverage/
+test/
+README.md
+*.env
+*.log
+.vscode/

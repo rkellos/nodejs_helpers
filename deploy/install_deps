@@ -1,0 +1,14 @@
+#!/bin/bash
+DEPLOYDIR=$(dirname "$0")
+
+if [ -f "$DEPLOYDIR/.staging" ] ; then
+  aws s3 cp s3://nodejs/applications/staging/nodejs-helpers/app_staging.env /srv/app.env --region us-east-1
+else 
+  aws s3 cp s3://nodejs/applications/production/nodejs-helpers/app.env /srv/app.env --region us-east-1
+fi
+
+source "$DEPLOYDIR/helpers.sh"
+
+if [ -d /srv/nodejs-helpers ]; then
+  rm -rf /srv/nodejs-helpers
+fi
