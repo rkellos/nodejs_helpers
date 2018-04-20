@@ -7,12 +7,16 @@
     "type": "git",
     "url": "http://github.com/rkellos/nodejs_helpers.git"
   },
+  "scripts": {
+    "scan": "node_modules/.bin/sonarqube-scanner-node"
+  },
   "author": "rkellos",
   "license": "ISC",
   "dependencies": {
     "ajv": "5.2.0",
     "mysql": "2.13.0",
     "redis": "2.7.1",
+    "sonarqube-scanner-node": "0.0.7",
     "winston": "2.3.1",
     "winston-aws-cloudwatch": "1.5.0"
   }
