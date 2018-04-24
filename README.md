@@ -2,6 +2,9 @@
 
 <b>Constants:</b>  (/lib/helpers/constants.js) - 
 
+![](http://localhost:9000/api/project_badges/measure?project=nodejs_helpers&metric=alert_status)
+![](https://img.shields.io/jenkins/s/https/jenkins.qa.ubuntu.com/view/Precise/view/All%20Precise/job/precise-desktop-amd64_default.svg)
+
   A common place for any constant used, or supplied via process.env; one place to change - this is a common software engineering practice. This can promote consistency, single place to change and locate. Including the same error message consistency.
 
   ## 

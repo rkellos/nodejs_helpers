@@ -2,5 +2,5 @@ projectKey=nodejs_helpers
 serverUrl=http://localhost:9000
 serverVersion=7.1.0.11001
 dashboardUrl=http://localhost:9000/dashboard/index/nodejs_helpers
-ceTaskId=AWL2aEZYQRfq3xx1Eqqd
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AWL2aEZYQRfq3xx1Eqqd
+ceTaskId=AWL2kWNRQRfq3xx1Eqqe
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWL2kWNRQRfq3xx1Eqqe
