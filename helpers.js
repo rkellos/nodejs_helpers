@@ -1,5 +1,6 @@
 "use strict";
 require("./lib/helpers/stack.js");
+require("dotenv").config();
 const Constant = require("./lib/helpers/constants.js");
 const logger = require("./lib/helpers/logger.js");
 const ConnectionFactory = require("./lib/factories/connection_factory.js");

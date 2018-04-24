@@ -10,4 +10,5 @@ start.sh
 .staging
 ._*
 .vscode*
+.scannerwork/scanner-report*
 
