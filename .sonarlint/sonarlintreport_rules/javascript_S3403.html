@@ -1,0 +1,29 @@
+<!doctype html><html><head><link href="rule.css" rel="stylesheet" type="text/css" /></head><body><h1><big>The identity operator ("===") should not be used with dissimilar types</big> (javascript:S3403)</h1><div class="rule-desc"><p>Comparing dissimilar types using the identity operator (<code>===</code>) will always return <code>false</code> because no type conversion is done
+before the comparison. Thus, such comparisons can only be bugs.</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+var a = 8;
+var b = "8";
+
+if (a === b) {  // Noncompliant; always false
+  // ...
+}
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+var a = 8;
+var b = "8";
+
+if (a == b) {
+  // ...
+}
+</pre>
+<p>or</p>
+<pre>
+var a = 8;
+var b = "8";
+
+if (a === Number(b)) {
+  // ...
+}
+</pre></div></body></html>

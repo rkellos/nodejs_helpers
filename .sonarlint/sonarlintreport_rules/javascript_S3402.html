@@ -1,0 +1,15 @@
+<!doctype html><html><head><link href="rule.css" rel="stylesheet" type="text/css" /></head><body><h1><big>Strings and non-strings should not be added</big> (javascript:S3402)</h1><div class="rule-desc"><p>Use a <code>+</code> with two numbers and you'll get addition. But use it with a string and anything else, and you'll get concatenation. Very often
+that's not what's intended. </p>
+<p>Since this may not be what's intended, this rule raises an issue when <code>+</code> is used with a string and a non-string.</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+var x = 5 + 8;  // okay
+var z = "8"
+var y = 5 + z;  // Noncompliant; yields string "58"
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+var x = 5 + 8;
+var z = "8";
+var y = 5 + Number(z);
+</pre></div></body></html>

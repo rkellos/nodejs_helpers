@@ -1,0 +1,16 @@
+<!doctype html><html><head><link href="rule.css" rel="stylesheet" type="text/css" /></head><body><h1><big>"void" should not be used</big> (javascript:S3735)</h1><div class="rule-desc"><p>The <code>void</code> operator evaluates it's argument and unconditionally returns <code>undefined</code>. There are only rare justifications for
+using it. The assignment of <code>undefined</code> is a bad practice - it should only be seen as a starting value for an uninitialized variable - and
+the evaluation of the argument can be handled by other means. Further, the use of <code>void</code>, which can be used with or without parentheses, so
+could be confusing. </p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+void(function() {
+   ...
+}());
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+(function() {
+   ...
+}());
+</pre></div></body></html>

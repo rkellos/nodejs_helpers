@@ -1,0 +1,15 @@
+<!doctype html><html><head><link href="rule.css" rel="stylesheet" type="text/css" /></head><body><h1><big>Wrapper objects should not be used for primitive types</big> (javascript:PrimitiveWrappers)</h1><div class="rule-desc"><p>The use of wrapper objects for primitive types is gratuitous, confusing and dangerous. Simple literals should be used instead.</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+var x = new Boolean(false);
+if (x) {
+  alert('hi');  // Shows 'hi'.
+}
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+var x = false;
+if (x) {
+  alert('hi');
+}
+</pre></div></body></html>

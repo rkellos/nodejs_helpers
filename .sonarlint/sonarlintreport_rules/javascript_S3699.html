@@ -1,0 +1,16 @@
+<!doctype html><html><head><link href="rule.css" rel="stylesheet" type="text/css" /></head><body><h1><big>The output of functions that don't return anything should not be used</big> (javascript:S3699)</h1><div class="rule-desc"><p>If a function does not return anything, it makes no sense to use its output. Specifically, passing it to another function, or assigning its
+"result" to a variable is probably a bug because such functions return <code>undefined</code>, which is probably not what was intended.</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+function foo() {
+}
+
+a = foo();
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+function foo() {
+}
+
+foo();
+</pre></div></body></html>

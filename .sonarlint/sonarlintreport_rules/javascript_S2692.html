@@ -1,0 +1,32 @@
+<!doctype html><html><head><link href="rule.css" rel="stylesheet" type="text/css" /></head><body><h1><big>"indexOf" checks should not be for positive numbers</big> (javascript:S2692)</h1><div class="rule-desc"><p>Most checks against an <code>indexOf</code> call against a string or array compare it with -1 because 0 is a valid index. Any checks which look for
+values &gt;0 ignore the first element, which is likely a bug.</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+var color = "blue";
+var name = "ishmael";
+var number = 123;
+
+var arr = [color, name];
+
+if (arr.indexOf("blue") &gt; 0) { // Noncompliant
+  // ...
+}
+if (arr[0].indexOf("ish") &gt; 0 { // Noncompliant
+  // ...
+}
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+var color = "blue";
+var name = "ishmael";
+var number = 123;
+
+var arr = [color, name];
+
+if (arr.indexOf("blue") &gt;= 0) {
+  // ...
+}
+if (arr[0].indexOf("ish") &gt; -1 {
+  // ...
+}
+</pre></div></body></html>
