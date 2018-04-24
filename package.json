@@ -1,6 +1,6 @@
 {
   "name": "nodejs-helpers",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "common helpers, logging, constants, etc",
   "main": "helpers.js",
   "repository": {
